@@ -16,7 +16,7 @@ cd rkt-v1.1.0
 ```
 Check out the rkt commands.
 ```
-./rkt help
+./rkt
 ```
 
 ### Install acbuild
