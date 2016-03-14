@@ -56,3 +56,14 @@ acbuild --debug set-exec -- /bin/echo Hello World!
 acbuild --debug write hello.aci
 acbuild --debug end
 ```
+
+### Run
+To launch our application image:
+```
+sudo ./rkt --insecure-options=image run hello.aci
+```
+
+You can now see your hello application in your local image list:
+```
+./rkt image list
+```
