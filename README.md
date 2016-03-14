@@ -9,12 +9,12 @@ To install rkt we need to download the rkt binary, that can be found on Github.
 ```
 wget https://github.com/coreos/rkt/releases/download/v1.1.0/rkt-v1.1.0.tar.gz
 ```
+and then extract it and go to the rkt-v1.1.0/ directory.
 ```
 tar xzvf rkt-v1.1.0.tar.gz
-```
-```
 cd rkt-v1.1.0
 ```
+Check out the rkt commands.
 ```
 ./rkt help
 ```
@@ -42,4 +42,17 @@ vim ~/.bashrc
 ```
 export ACBUILD_BIN_DIR=~/acbuild/bin
 export PATH=$PATH:$ACBUILD_BIN_DIR
+```
+
+### Create the image
+
+Now we can use acbuild to create the image.
+
+```
+acbuild --debug begin
+acbuild --debug set-name hello
+acbuild --debug dep add quay.io/coreos/alpine-sh
+acbuild --debug set-exec -- /bin/echo Hello World!
+acbuild --debug write hello.aci
+acbuild --debug end
 ```
