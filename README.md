@@ -24,6 +24,7 @@ Check out the rkt commands.
 To install acbuild we will clone the source repository.
 
 ```
+cd
 git clone https://github.com/appc/acbuild
 ```
 ```
@@ -38,10 +39,14 @@ To make sure that your shell can find the bin/ directory executable, we will app
 ```
 vim ~/.bashrc
 ```
-... and put the following lines at the end of the file:
+Add the following lines at the end of the file:
 ```
 export ACBUILD_BIN_DIR=~/acbuild/bin
 export PATH=$PATH:$ACBUILD_BIN_DIR
+```
+and set alias to acbuild:
+```
+alias acbuild="'${PWD}/bin/./acbuild'"
 ```
 
 ### Create the image
