@@ -3,7 +3,6 @@
 This guide will show you how to install, build and run a "Hello World" application.
 
 ### Install rkt
-
 To install rkt we need to download the rkt binary, that can be found on Github.
 
 ```
@@ -19,8 +18,13 @@ Check out the rkt commands.
 ./rkt
 ```
 
-### Install acbuild
+### Install go
+To build acbuild on the next step we need to install go:
+```
+sudo dnf install golang
+```
 
+### Install acbuild
 To install acbuild we will clone the source repository.
 
 ```
@@ -50,9 +54,10 @@ alias acbuild="'${PWD}/bin/./acbuild'"
 ```
 
 ### Create the image
+Go to rkt/ directory.
+```cd rkt-v1.1.0```
 
 Now we can use acbuild to create the image.
-
 ```
 acbuild --debug begin
 acbuild --debug set-name hello
