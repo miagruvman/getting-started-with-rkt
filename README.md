@@ -6,12 +6,12 @@ This guide will show you how to install, build and run a "Hello World" applicati
 To install rkt we need to download the rkt binary, that can be found on Github.
 
 ```
-wget https://github.com/coreos/rkt/releases/download/v1.1.0/rkt-v1.1.0.tar.gz
+wget https://github.com/coreos/rkt/releases/download/v1.2.0/rkt-v1.2.0.tar.gz
 ```
-and then extract it and go to the rkt-v1.1.0/ directory.
+and then extract it and go to the rkt-v1.2.0/ directory.
 ```
-tar xzvf rkt-v1.1.0.tar.gz
-cd rkt-v1.1.0
+tar xzvf rkt-v1.2.0.tar.gz
+cd rkt-v1.2.0
 ```
 Check out the rkt commands.
 ```
@@ -55,7 +55,7 @@ alias acbuild="'${PWD}/bin/./acbuild'"
 
 ### Create the image
 Go to rkt/ directory.
-```cd rkt-v1.1.0```
+```cd rkt-v1.2.0```
 
 Now we can use acbuild to create the image.
 ```
