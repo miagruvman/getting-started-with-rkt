@@ -19,16 +19,18 @@ Check out the rkt commands.
 ```
 
 ### Install go
-To build acbuild on the next step we need to install go:
+To build acbuild on the next step we first need to install go:
 ```
-sudo dnf install golang
+cd
+wget https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
+tar xzvf go1.6.linux-amd64.tar.gz
+go version
 ```
 
 ### Install acbuild
 To install acbuild we will clone the source repository.
 
 ```
-cd
 git clone https://github.com/appc/acbuild
 ```
 ```
@@ -54,8 +56,7 @@ alias acbuild="'${PWD}/bin/./acbuild'"
 ```
 
 ### Create the image
-Go to rkt/ directory.
-```cd rkt-v1.2.0```
+Go to ```rkt-v1.2.0```/ directory.
 
 Now we can use acbuild to create the image.
 ```
