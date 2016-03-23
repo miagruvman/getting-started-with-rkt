@@ -28,19 +28,15 @@ go version
 ```
 
 ### Install acbuild
-To install acbuild we will clone the source repository.
+To install acbuild we will clone the source repository and build it.
 
 ```
 git clone https://github.com/appc/acbuild
-```
-```
 cd acbuild
-```
-```
 ./build
 ```
 
-To make sure that your shell can find the bin/ directory executable, we will append this directory to your enviroment´s $PATH variable.
+Now we have a bin/ directory. To make sure that your shell can find it executable, we will append this directory to your enviroment´s $PATH variable.
 
 ```
 vim ~/.bashrc
@@ -50,13 +46,13 @@ Add the following lines at the end of the file:
 export ACBUILD_BIN_DIR=~/acbuild/bin
 export PATH=$PATH:$ACBUILD_BIN_DIR
 ```
-and set alias to acbuild:
+Set alias to acbuild:
 ```
 alias acbuild="'${PWD}/bin/./acbuild'"
 ```
 
 ### Create the image
-Go to ```rkt-v1.2.0```/ directory.
+Go to ```rkt-v1.2.0/``` directory.
 
 Now we can use acbuild to create the image.
 ```
