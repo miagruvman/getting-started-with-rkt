@@ -70,7 +70,7 @@ To launch our application image:
 sudo ./rkt --insecure-options=image run hello.aci
 ```
 
-You can now see your hello application in your local image list:
+You can now see information about your hello application in your pod list:
 ```
-./rkt image list
+./rkt list
 ```
